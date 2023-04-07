@@ -1,17 +1,17 @@
 # ChirpChef by Chloe Rodriguez
-A Twitter sytled recipe blog!
+A Twitter styled recipe blog!
 This app is created so that users can post recipe and recieve feedback and likes!
 
 ### Technologies used: 
-Javascript
-CSS
-Express
-nodeJS
-MongoDB
-EJS
-HTML5
-Nodemon
-Mongoose
+* Javascript
+* CSS
+* Express
+* nodeJS
+* MongoDB
+* EJS
+* HTML5
+* Nodemon
+* Mongoose
 
 ### Live Link:
 
