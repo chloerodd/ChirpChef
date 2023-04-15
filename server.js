@@ -5,6 +5,7 @@ app.set('view engine', 'ejs');
 const recipesRouter = require('./routers/recipesRouter.js');
 const { PORT } = require('./config.js');
 
+app.use(express.static("public"))
 app.use('/recipes',recipesRouter)
 //dashboard
 // app.get('/', (req, res) => {

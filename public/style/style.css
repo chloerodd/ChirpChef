@@ -1,0 +1,33 @@
+/* index.ejs */
+.indexBody {
+    background-color: #85aa9b;
+    color: #3A414A;
+    text-align: center;
+}
+.resultItem {
+    border: solid 2px;
+    padding: 10px;
+}
+li {
+    border: solid 2px;
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+}
+.newBody {
+    background-color: #85aa9b;
+    color: #3A414A;
+    text-align: center;
+}
+a {
+    color: #3A414A;
+    text-decoration: none;
+}
+#recipe-img {
+    border: solid 2px black;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-size: contain;
+}

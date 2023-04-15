@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Post A Chirp</title>
 </head>
-<body>
+<body class = "newBody">
   <h2>MAKE A RECIPE👩🏽‍🍳🍳</h2>
+  <nav>
+		<h1></h1>
+		<ul>
+			<li><a href="./">Home</a></li>
+		</ul>
+	</nav>
     <form class="RecipeForm">
 
-      <label for="recipe-name" >RECIPE Name</label>
-        <input name="recipe-name" id="search" placeholder="my thing" />
+      <label for="recipe-name" >Recipe Name:</label>
+        <input name="recipe-name" id="formTitle" placeholder="my thing" />
 
-      <label for="searchbar">SEARCH FOR RECIPE IMAGE</label>
+        <button onclick="submitRecipe(event)" type="button">Search</button>
+
+      <label for="searchbar">Search For Recipe Image:</label>
         <input name="searchbar" id="searchbar" placeholder="tacos" />
-      
-        <button onclick="submitRecipe(event)" type="button">SEARCH</button>
-
+        <div id="recipe-img"></div>
 
         <ul id="searchResultsList">
-          empty
+          
         </ul>
-
+        <!-- <label for="img title" >Image Name</label>
+          <input type="text" name="title" id="img-name" placeholder="image name"/>
+        <div id="recipe-img">[Recipe Image Here]</div> -->
       </form>
 
       <script>
         const searchBar = document.getElementById('searchbar'); //<---grabbing the searchbar and assigning it to an acceiible variable
         let searchTerm = "";
         let searchResults = [];
+        
 
         function submitRecipe(event){
           event.preventDefault();
@@ -55,13 +65,26 @@
         function listResults() {
           console.log(searchResults);
           const listContainer = document.getElementById('searchResultsList'); // <--- grabbing the ul  
+          const formContainer = document.getElementById('formTitle'); // <--- grabbing the ul  
+          const imgContainer = document.getElementById('recipe-img');
           searchResults.forEach(res => {
             const imgItem = document.createElement('li');
+            imgItem.setAttribute("class", "resultItem");
+            imgItem.onclick = function (event) {
+              console.log("onclick activated")
+              console.log(event.currentTarget.firstChild.innerText);
+              formContainer.value = event.currentTarget.firstChild.innerText;
+              console.log(event.currentTarget.children[1].src);
+
+              imgContainer.style.backgroundImage = `url("${event.currentTarget.children[1].src}")`;
+              listContainer.innerHTML = ""
+            }; //end of on click
+
             console.log(res.strMealThumb.split('/'));
             let urlArray = res.strMealThumb.split('/');
             console.log(urlArray[urlArray.length-1])
             let imageId = urlArray[urlArray.length-1];
-            imgItem.innerHTML = `<img src="https://www.themealdb.com//images//media//meals//${imageId}"> <p>${res.strMeal}</p>`;
+            imgItem.innerHTML = `<h3>${res.strMeal}</h3> <img src="https://www.themealdb.com//images//media//meals//${imageId}">`;
             listContainer.append(imgItem);
           })
         }

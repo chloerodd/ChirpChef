@@ -3,17 +3,16 @@ const router = express.Router();
 
 
 
-//index return all recipes (dashboard)
-// router.get('/', (req, res) => {
-//     res.render('recipes/index.ejs', {recipes: recipe });
-// })
+// index return all recipes (dashboard)
+router.get('/', (req, res) => {
+    res.render('index.ejs');
+})
  
 
 //post new recipe 
-// router.post('/new-post', (req, res) => {
-//     const newRecipe = req.body;
-//     res.send('Chirp created sucessfully!');
-// })
+router.get('/new-post', (req, res) => {
+    res.render('new-post.ejs');
+})
 
 //index return all recipes (dashboard)
 router.get('/newform', (req, res) => {
