@@ -12,19 +12,15 @@ router.get('/', (req, res) => {
 })
  
 
-//post new recipe 
-router.get('/new-post', (req, res) => {
-    res.render('new-post.ejs');
-})
+// //post new recipe 
+// router.get('/new-post', (req, res) => {
+//     res.render('new-post.ejs');
+// })
 
-//index return all recipes (dashboard)
+// create new
 router.get('/newform', (req, res) => {
     res.render('new.ejs');
 })
-
-// router.get('/newform', (req, res) => {
-//     res.render('new.ejs');
-// })
 
 //post
 router.post('/', (req, res) => {
@@ -37,11 +33,22 @@ router.post('/', (req, res) => {
 })
 
 //delete
-// router.delete('/recipes/:id', (req, res) => {
-//     const recipeId = req.params.id;
-// })
+router.delete('/:id', async (req, res) => {
+    const recipes = await Recipe.findByIdAndDelete(rreq.params.id)
+    res.redirect('/recipes')
+})
 
+//show
+router.get('/:id', async (req , res) => {
+    const showRecipe = await Recipe.findById(req.params.id)
+    res.render('show.ejs')
+})
 
+//edit and update
+router.get('/:id/edit', async (req, res) => {
+    const showRecipe = await Recipe.findById(req.params.id)
+    res.render('edit.ejs')
+})
 
 
 

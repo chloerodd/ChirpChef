@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Post A Chirp</title>
+</head>
+<body class = "newBody">
+  <h2>MAKE A RECIPE👩🏽‍🍳🍳</h2>
+  <nav>
+		<h1></h1>
+		<ul>
+			<li><a href="./">Home</a></li>
+		</ul>
+	</nav>
+    <form class="RecipeForm" action="/recipes" method="POST">
+
+      <label for="recipe-name" >Recipe Name:</label>
+        <input name="recipe-name" id="formTitle" placeholder="my thing" />
+
+
+      <label for="searchbar">Search For Recipe Image:</label>
+        <input name="searchbar" id="searchbar" placeholder="tacos" />
+        <button onclick="submitRecipe(event)" type="button">Search</button>
+
+      <label for="Ingredients">Ingredients:</label>
+       <textarea type="text" id="ingredients" name="ingredients"></textarea>
+      <label for="Instructions">Instructions:</label>
+        <input type="text" id="Instructions" name="instructions">
+        <div id="recipe-img"></div>
+
+        <button type="button">Post!</button>
+        <button type="button">Delete</button>
+
+
+        <ul id="searchResultsList">
+          
+        </ul>
+        
+      </form>
+      
+      <script>
+
+     </script>
+</body>
+</html>

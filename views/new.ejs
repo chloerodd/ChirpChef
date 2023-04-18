@@ -19,7 +19,7 @@
 
       <label for="recipe-name" >Recipe Name:</label>
         <input name="recipe-name" id="formTitle" placeholder="my thing" />
-
+        <input  name="imgUrl" id="imgUrl"/>
 
       <label for="searchbar">Search For Recipe Image:</label>
         <input name="searchbar" id="searchbar" placeholder="tacos" />
@@ -75,17 +75,22 @@
           const listContainer = document.getElementById('searchResultsList'); // <--- grabbing the ul  
           const formContainer = document.getElementById('formTitle'); // <--- grabbing the   
           const imgContainer = document.getElementById('recipe-img');
+          const imgUrl = document.getElementById('imgUrl')
           searchResults.forEach(res => {
             const imgItem = document.createElement('li');
             imgItem.setAttribute("class", "resultItem");
+
             imgItem.onclick = function (event) {
               console.log("onclick activated")
               console.log(event.currentTarget.firstChild.innerText);
               formContainer.value = event.currentTarget.firstChild.innerText;
               console.log(event.currentTarget.children[1].src);
-
+              console.log(imgUrl)
               imgContainer.style.backgroundImage = `url("${event.currentTarget.children[1].src}")`;
+              imgUrl.value = event.currentTarget.children[1].src
+              // imgUrl.value = 'hi'
               listContainer.innerHTML = ""
+
             }; //end of on click
 
             console.log(res.strMealThumb.split('/'));
