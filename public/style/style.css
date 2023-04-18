@@ -31,3 +31,17 @@ a {
     margin: auto;
     background-size: contain;
 }
+.RecipeForm {
+    border: solid 2px black;
+    width: 800px;
+    height: 800px;
+    margin: auto;
+}
+#ingredients {
+    max-width: 300px;
+    min-width: 150px;
+    max-height: 500px;
+    min-height: 17px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

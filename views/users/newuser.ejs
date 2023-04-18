@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Post A Chirp</title>
+</head>
+<body class = "newBody">
+  <h2>MAKE A RECIPE👩🏽‍🍳🍳</h2>
+  <nav>
+		<h1></h1>
+		<ul>
+			<li><a href="./">Home</a></li>
+		</ul>
+	</nav>
+
+    <h1>Sign Up</h1>
+
+    <form class="signup" method="POST" action="/users/signup"> 
+    <fieldset>
+        <label for="firstName">First Name: </label>
+        <input id="firstName" type="text" name="firstName">
+    </fieldset>
+    <fieldset>
+        <label for="lastName">Last Name: </label>
+        <input id="lastName" type="text" name="lastName">
+    </fieldset>
+    <fieldset>
+        <label for="email">E-mail: </label>
+        <input id="email" type="email" name="email">
+    </fieldset>
+    <fieldset>
+        <label for="password">Password: </label>
+        <input id="password" type="password" name="password">
+    </fieldset>
+
+    <input type="submit" value="submit">
+
+    or <a href="/users/login">Login</a>
+
+    </form>
+</body>
+</html>

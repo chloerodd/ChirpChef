@@ -8,4 +8,6 @@ const RecipeSchema = new mongoose.Schema ({
     image: String
 })
 
-const Recipe = mongoose.model("Recipe", RecipeSchema)
+const Recipe = mongoose.model("Recipe", RecipeSchema, "recipes")
+
+module.exports = {Recipe}
