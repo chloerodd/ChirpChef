@@ -20,9 +20,19 @@
 		<div class="buttons">
 			<a href="/login"><button>Login</button></a>
 			<a href="/signup"><button>Signup</button></a>
-            <a href="./new-post"><button>New Chirp</button></a>
+            <a href="/recipes/newform"><button>New Chirp</button></a>
 		</div>
-
+		
+		<div class="dash">
+			<% for (let i = 0; i < recipes.length; i++) { %>
+				<h3>Name: <%=recipes[i].name%></h3>
+				<h3>Ingredients: <%=recipes[i].ingredients%></h3>
+				<h3>Instructions: <%=recipes[i].instructions%></h3>
+				<a href="/recipes/<%= recipes[i]._id %>">
+				  <img class="recipe-img" src="<%= recipes[i].image %>" alt="recipe image">
+				</a>
+			  <% } %>
+		</div>
 		<footer>
 			
 		</footer>

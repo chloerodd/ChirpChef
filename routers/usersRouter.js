@@ -26,7 +26,7 @@ const requiredFields = ['firstName', 'lastName', 'email', 'password']
     const { firstName, lastName, email, password } = req.body
 
     //now ready to post
-    User.create{}
+    User.create{};
 })
 
 

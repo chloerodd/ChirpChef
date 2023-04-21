@@ -45,3 +45,12 @@ a {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.recipe-img {
+    width: 500px;
+    height: auto;
+}
+.dash {
+    border: solid 2px black;
+    margin: 10px;
+    background: white;
+}

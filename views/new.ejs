@@ -12,14 +12,14 @@
   <nav>
 		<h1></h1>
 		<ul>
-			<li><a href="./">Home</a></li>
+			<li><a href="/recipes">Home</a></li>
 		</ul>
 	</nav>
     <form class="RecipeForm" action="/recipes" method="POST">
 
       <label for="recipe-name" >Recipe Name:</label>
-        <input name="recipe-name" id="formTitle" placeholder="my thing" />
-        <input  name="imgUrl" id="imgUrl"/>
+        <input name="name" id="formTitle" placeholder="my thing" />
+        <input  name="image" id="imgUrl"/>
 
       <label for="searchbar">Search For Recipe Image:</label>
         <input name="searchbar" id="searchbar" placeholder="tacos" />
@@ -29,10 +29,10 @@
        <textarea type="text" id="ingredients" name="ingredients"></textarea>
       <label for="Instructions">Instructions:</label>
         <input type="text" id="Instructions" name="instructions">
-        <div id="recipe-img"></div>
+        <div name="recipe-image" id="recipe-img"></div>
 
-        <button type="button">Post!</button>
-        <button type="button">Delete</button>
+        <input type="submit" value="submit"/>
+        <a href="/recipes"><button type="button">Post!</button></a>
 
 
         <ul id="searchResultsList">
