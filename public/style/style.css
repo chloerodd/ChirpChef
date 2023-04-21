@@ -54,3 +54,31 @@ a {
     margin: 10px;
     background: white;
 }
+.showBody {
+    text-align: center;
+    background-color: #85aa9b;
+}
+.recipeShow {
+    border: solid 2px black;
+    margin: 10px;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+.bg-body-tertiary {
+    background-color: #85aa9b;
+}
+.navbar {
+    --bs-navbar-color: #19392b;
+    --bs-navbar-active-color: #d0ded8;
+}
+#likebtn{
+    background-color: #588b76;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+}
+.RecipeEditForm {
+    border: solid 2px #18392b;
+    margin: 10px;
+    padding: 10px;
+}

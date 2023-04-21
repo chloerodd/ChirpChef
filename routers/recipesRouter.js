@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require ('mongoose')
 const {Recipe} = require('../models/recipe')
-const startRecipes = require('../db/recipeSeedData')
+
 
 //==============ROUTES============================
 
@@ -43,22 +43,41 @@ router.delete('/:id', async (req, res) => {
 })
 
 //show
-router.get('/:id', async (req , res) => {
-    const recipe = await Recipe.findById(req.params.id)
-    res.render('show.ejs', {recipe})
+router.get('/:id', async (req , res, next) => {
+    try {
+    const recipe = await Recipe.findById(req.params.id);
+
+    res.render('show', {recipe});
+    }
+    catch(error) {
+        console.log(error);
+        next();
+    }
 })
 
 //edit and update
-router.get('/:id/edit', async (req, res) => {
-    const recipe = await Recipe.findById(req.params.id)
-    res.render('edit.ejs', {recipe})
+router.get('/:id/edit', async (req, res, next) => {
+    try{
+    const recipe = await Recipe.findById(req.params.id);
+    res.render('edit', {recipe: recipe});
+    }
+    catch(error){
+        console.log("error");
+        next();
+    }
+})
+router.put('/:id', async (req, res) =>{
+    const id = req.params.id;
+    const recipe = await Recipe.findByIdAndUpdate(id, req.body, {new: true,})
+    res.redirect('/recipes')
 })
 
+
 //Seed
-router.get('/seed', async (req, res) => {
-	const recipe = await Recipe.deleteMany({});
-	const recipes = await Recipe.create(startRecipes);
-	res.redirect('/recipes');
-});
+// router.get('/seed', async (req, res) => {
+// 	const recipe = await Recipe.deleteMany({});
+// 	const recipes = await Recipe.create(startRecipes);
+// 	res.redirect('/recipes');
+// });
 
 module.exports = router;
