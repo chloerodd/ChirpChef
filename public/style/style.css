@@ -3,6 +3,8 @@
     background-color: #85aa9b;
     color: #3A414A;
     text-align: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 .resultItem {
     border: solid 2px;
@@ -36,6 +38,7 @@ a {
     width: 800px;
     height: 800px;
     margin: auto;
+    padding: 10px;
 }
 #ingredients {
     max-width: 300px;
@@ -48,11 +51,16 @@ a {
 .recipe-img {
     width: 500px;
     height: auto;
+    border: solid 2px black;
+    margin: 5px auto 40px;
 }
 .dash {
     border: solid 2px black;
-    margin: 10px;
+    margin: 55px;
     background: white;
+    padding: 10px;
+    overflow-y: scroll;
+    scroll-behavior: auto;
 }
 .showBody {
     text-align: center;
@@ -65,13 +73,6 @@ a {
     width: auto;
     padding: 10px;
 }
-.bg-body-tertiary {
-    background-color: #85aa9b;
-}
-.navbar {
-    --bs-navbar-color: #19392b;
-    --bs-navbar-active-color: #d0ded8;
-}
 #likebtn{
     background-color: #588b76;
     color: #ffffff;
@@ -81,4 +82,14 @@ a {
     border: solid 2px #18392b;
     margin: 10px;
     padding: 10px;
+}
+.navbar-custom {
+    background-color: #85aa9b;
+}
+h3{
+    font-size: 20px;
+    text-decoration: underline;
+}
+h2{
+    font-size: 15px
 }

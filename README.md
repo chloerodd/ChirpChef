@@ -12,8 +12,16 @@ This app is created so that users can post recipe and recieve feedback and likes
 * HTML5
 * Nodemon
 * Mongoose
+*Recipe API
 
 ### Live Link:
+https://chirpchef.onrender.com/recipes
+
+### Wireframes
+Index page:
+![alt text](https://imgur.com/gallery/KbBik60)
+Show page:
+![alt text](https://imgur.com/gallery/QCeG9KD)
 
 ## User Stories:
 ### MVP
@@ -26,3 +34,13 @@ This app is created so that users can post recipe and recieve feedback and likes
 ### Stretch Goals
 * As a user, I will be able to comment on a post.
 * As a user, I will be able to login to my account.
+
+### Code Snippet
+```js
+const RecipeSchema = new mongoose.Schema ({
+    name: String,
+    ingredients: String,
+    instructions: String,
+    image: String
+})
+```

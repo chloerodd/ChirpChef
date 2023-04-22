@@ -73,11 +73,5 @@ router.put('/:id', async (req, res) =>{
 })
 
 
-//Seed
-// router.get('/seed', async (req, res) => {
-// 	const recipe = await Recipe.deleteMany({});
-// 	const recipes = await Recipe.create(startRecipes);
-// 	res.redirect('/recipes');
-// });
 
 module.exports = router;

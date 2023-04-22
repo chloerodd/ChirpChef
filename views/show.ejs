@@ -11,8 +11,8 @@
 </head>
 <body class = "showBody">
     <div>
-        <h2><%=recipe.name%></h2>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <h1><%=recipe.name%></h1>
+        <nav class="navbar-custom navbar ">
             <div class="container-fluid">
               <a class="navbar-brand" href="/recipes"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,9 +28,9 @@
         </nav>
     </div>
     <div class="recipeShow">
-        <h3>Name: <%=recipe.name%></h3>
-        <h3>Ingredients: <%=recipe.ingredients%></h3>
-        <h3>Instructions: <%=recipe.instructions%></h3>
+        <h3>Name: </h3><h2><%=recipe.name%></h2> 
+        <h3>Ingredients:</h3><h2><%=recipe.ingredients%></h2> 
+        <h3>Instructions:</h3><h2><%=recipe.instructions%></h2> 
         <a href="/recipes/<%= recipe._id %>">
             <img class="recipe-img" src="<%= recipe.image %>" alt="recipe image">
         </a>
