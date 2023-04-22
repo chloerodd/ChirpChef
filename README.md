@@ -12,7 +12,7 @@ This app is created so that users can post recipe and recieve feedback and likes
 * HTML5
 * Nodemon
 * Mongoose
-*Recipe API
+* Recipe API
 
 ### Live Link:
 https://chirpchef.onrender.com/recipes
