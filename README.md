@@ -19,9 +19,9 @@ https://chirpchef.onrender.com/recipes
 
 ### Wireframes
 Index page:
-![alt text](https://imgur.com/gallery/KbBik60)
+![alt text](https://imgur.com/gallery/KbBik60.png)
 Show page:
-![alt text](https://imgur.com/gallery/QCeG9KD)
+![alt text](https://imgur.com/gallery/QCeG9KD.png)
 
 ## User Stories:
 ### MVP
